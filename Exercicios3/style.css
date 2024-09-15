@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    background-color: rgb(140, 140, 226);
+}   
+.slider{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+    transition: transform 0,5s ease-in-out;
+}
+.slide img{
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.slide{
+    width: auto;
+    display: flex;
+}
+button{
+    position: absolute;
+    top: 50%;
+    transform: transplate(-50%);
+    cursor: pointer;
+    padding: 10px;
+    border:none;
+    color: white;
+    background-color: rgb(0,0,0,5);
+}
+.prev{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
