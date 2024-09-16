@@ -1,9 +1,6 @@
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('task-list');
     let draggedItem = null;
 
-    // Adiciona os eventos de arrasto a cada item da lista
     list.querySelectorAll('li').forEach(item => {
         item.addEventListener('dragstart', (e) => {
             draggedItem = e.target;
@@ -43,4 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});

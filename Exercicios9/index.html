@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="openModalBtn">Login</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+                <p id="error-message" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById('openModalBtn');
+        var span = document.getElementsByClassName('close')[0];
+        var form = document.getElementById('loginForm');
+        var errorMessage = document.getElementById('error-message');
+
+        btn.onclick = function() {
+            modal.style.display = 'block';
+        }
+
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        form.onsubmit = function(event) {
+            event.preventDefault(); 
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === '' || password === '') {
+                errorMessage.textContent = 'Por favor, preencha todos os campos.';
+            } else {
+                errorMessage.textContent = '';
+                alert('Login realizado com sucesso!');
+                modal.style.display = 'none'; 
+            }
+        }
+    </script>
+</body>
+</html>

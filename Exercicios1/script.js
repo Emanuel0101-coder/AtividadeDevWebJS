@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById("registrationForm");
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -46,8 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validatePassword();
 
         if (nameError.textContent || emailError.textContent || passwordError.textContent) {
-            event.preventDefault(); // Evita o envio do formulário se houver erros
+            event.preventDefault(); 
         }
     });
-});
     
