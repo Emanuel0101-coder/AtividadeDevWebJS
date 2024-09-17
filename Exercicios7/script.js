@@ -1,3 +1,5 @@
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('task-list');
     let draggedItem = null;
 
